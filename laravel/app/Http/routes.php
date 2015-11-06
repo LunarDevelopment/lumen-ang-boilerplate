@@ -16,7 +16,7 @@ $app->get('/', function() use ($app) {
   return 'working';
 });
 
-$app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], function($app)
+$app->group(['prefix' => 'api','namespace' => 'App\Http\Controllers'], function($app)
             {
               $app->get('goal','GoalController@index');
 

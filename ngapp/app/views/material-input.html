@@ -1,0 +1,17 @@
+
+<input-field class="form-group has-feedback"  >
+  <input data-position="left" 
+          tooltipped 
+          data-delay="150" 
+          data-tooltip="{{options.templateOptions.label}}" 
+          class="form-control input-lg" 
+          name="{{::id}}" 
+          type="text"
+          ng-model="model[options.key]"
+          id="{{::id}}" 
+          required>
+  <span class="ion-person form-control-feedback"></span>
+  <label>
+    {{options.templateOptions.label}}
+  </label>
+</input-field>

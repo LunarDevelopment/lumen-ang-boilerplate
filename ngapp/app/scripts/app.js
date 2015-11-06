@@ -17,9 +17,20 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angularMoment',
+    'ui.materialize',
+    'satellizer',
+    'formly'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, formlyConfigProvider) {
+    formlyConfigProvider.setType([{
+      name: 'input',
+      templateUrl: 'views/material-input.html'
+    }, {
+      name: 'select',
+      templateUrl: 'views/material-select.html'
+    }]);
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

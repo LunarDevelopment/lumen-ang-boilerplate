@@ -40,6 +40,8 @@ module.exports = function(config) {
       'bower_components/moment/moment.js',
       'bower_components/angular-moment/angular-moment.js',
       'bower_components/satellizer/satellizer.js',
+      'bower_components/api-check/dist/api-check.js',
+      'bower_components/angular-formly/dist/formly.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",

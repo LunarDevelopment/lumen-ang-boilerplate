@@ -1,18 +1,37 @@
 <div class="section">
   <div class="row">
     <div class="col m4 s12">
-      <div class="card-panel">
-        
-      </div>
+      <ul class="collection">
+        <li ng-repeat="goal in main.goals | filter:main.authorMatch('Lewis')" class="collection-item avatar">
+          <i class="material-icons circle purple"></i>
+          <span class="title">{{goal.title}}</span>
+          <p>{{goal.status}} <br>
+            {{goal.author}}
+          </p>
+          <a ng-click="main.deleteGoal(goal.id)" class="secondary-content">
+            <i class="material-icons">delete</i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="col m4 s12">
+      <ul class="collection">
+        <li ng-repeat="goal in main.goals | filter:main.authorMatch('Darren')" 
+            class="collection-item avatar">
+          <i class="material-icons circle green"></i>
+          <span class="title">{{goal.title}}</span>
+          <p>{{goal.status}} <br>
+            {{goal.author}}
+          </p>
+          <a ng-click="main.deleteGoal(goal.id)" class="secondary-content">
+            <i class="material-icons">delete</i></a>
+        </li>
+      </ul>
     </div>
     <div class="col m4 s12">
       <div class="card-panel">
-        
-      </div>
-    </div>
-    <div class="col m4 s12">
-      <div class="card-panel">
-        
+        <formly-form model="main.goal" fields="main.goalFields">
+          <button type="submit" class="btn btn-default" ng-click="main.createGoal(main.goal)">Submit</button>
+        </formly-form>
       </div>
     </div>
   </div>

@@ -43,7 +43,7 @@ class GoalController extends Controller
     $Goal  = Goal::find($id);
     $Goal->title = $request->input('title');
     $Goal->author = $request->input('author');
-    $Goal->isbn = $request->input('status');
+    $Goal->status = $request->input('status');
     $Goal->save();
 
     return response()->json($Goal);

@@ -25,11 +25,14 @@ angular
   ])
   .config(function ($routeProvider, formlyConfigProvider) {
     formlyConfigProvider.setType([{
-      name: 'input',
+      name: 'title',
       templateUrl: 'views/material-input.html'
     }, {
-      name: 'select',
+      name: 'author',
       templateUrl: 'views/material-select.html'
+    }, {
+      name: 'status',
+      templateUrl: 'views/material-status.html'
     }]);
     $routeProvider
       .when('/', {

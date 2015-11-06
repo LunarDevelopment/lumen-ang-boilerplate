@@ -49,7 +49,7 @@ angular.module('inlineApp')
     vm.goalFields = [
       {
         key: 'title',
-        type: 'input',
+        type: 'title',
         templateOptions: {
           label: 'Title',
           placeholder: 'Whats the goal?'
@@ -57,7 +57,7 @@ angular.module('inlineApp')
       },
       {
         key: 'author',
-        type: 'select',
+        type: 'author',
         templateOptions: {
           label: 'Who',
           placeholder: 'Which of us needs to do the super sick trick?'
@@ -65,7 +65,7 @@ angular.module('inlineApp')
       },
       {
         key: 'status',
-        type: 'input',
+        type: 'status',
         templateOptions: {
           label: 'Status',
           placeholder: 'How close is it?'
